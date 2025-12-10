@@ -1,8 +1,8 @@
-#Hubble Frontier Fields – Radial Curvature Shoulders (Dec 2025)
-##A reproducible analysis of κ-map curvature features across all CATS HFF clusters
-##(this is a clean up and an update the HFF-18-Mass-Density-Maps notebook)
+**Hubble Frontier Fields – Radial Curvature Shoulders (Dec 2025)**
+A reproducible analysis of κ-map curvature features across all CATS HFF clusters
+(this is a clean up and an update the HFF-18-Mass-Density-Maps notebook)
 
-###Overview
+**Overview**
 
 This repository contains a full, reproducible analysis of radial curvature profiles in the Hubble Frontier Fields (HFF) galaxy clusters, using κ (convergence) maps from three independent strong-lensing teams:
 
@@ -19,12 +19,13 @@ Present in every reconstruction team,
 Robust to azimuthal anisotropy (jackknife),
 
 Robust to centre uncertainty (jitter),
-
+  
 Robust to pixel scale / binning,
-
+  
 Not attributable to map edges or smoothing artefacts.
 
 The analysis is purely observational and geometric. No assumptions about dark matter or modified gravity enter the pipeline.
+
 Mapmaker differences (multiple CATS versions),
 
 Azimuthal anisotropy (jackknife wedge tests),
@@ -35,31 +36,37 @@ Pixel-scale or binning choices,
 
 Map-edge artefacts.
 
+
 The analysis is purely geometric and observational; it relies on no theoretical assumptions about dark matter or modified gravity.
 
-##Data Sources
+**Data Sources**
 
 The notebook uses public κ maps from:
 
 CATS (Jauzac et al.)
+
 https://archive.stsci.edu/pub/hlsp/frontier/
 https://massmaps.eu
 
 https://sites.google.com/site/massmapshff/home
 
 Sharon et al.
+
 https://archive.stsci.edu/pub/hlsp/frontier/
+
 Available via the Frontier Fields lens modeling repository.
 
 Glafic (Oguri et al.)
+
 https://archive.stsci.edu/pub/hlsp/frontier/
+
 http://www.slac.stanford.edu/~oguri/glafic/
 
 All maps include WCS metadata for consistent angular → physical coordinate conversion.
 
 No proprietary data or pre-processing is required.
 
-What the Notebook Does
+**What the Notebook Does**
 1. Load & harmonise maps from all three teams
 
 Uniform WCS extraction
@@ -108,7 +115,7 @@ Automatically exclude bins with insufficient azimuthal coverage.
 
 This establishes that the detected feature is not an artefact of any specific pipeline decision.
 
-Main Empirical Result
+**Main Empirical Result**
 
 Across all HFF clusters and all three mapmaking teams:
 
@@ -123,6 +130,9 @@ Not a smoothing artefact,
 Not a modelling bias (CATS uses parametric + non-parametric, Sharon uses parametric, Glafic uses different assumptions).
 
 The existence of a shared, repeated curvature feature in the outskirts of massive clusters is an observational result, independent of theoretical interpretation.
+**License**
 
+MIT License.
+CATS, Sharon, and Glafic κ-maps remain the property of their respective authors; only derived quantities appear here.
 results used in paper available here: 10.5281/zenodo.17178819.
 Feedback to GRTT@axworthy.net 
